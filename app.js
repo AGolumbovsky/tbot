@@ -9,4 +9,5 @@ bot.command('art', ctx => {
     })
 })
 
+
 bot.launch();
