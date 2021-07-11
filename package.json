@@ -1,0 +1,26 @@
+{
+  "name": "tbot",
+  "version": "1.0.0",
+  "description": "tbot that was built not bought",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agolumbovsky/tbot.git"
+  },
+  "keywords": [
+    "telegram",
+    "bot"
+  ],
+  "author": "ag",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/agolumbovsky/tbot/issues"
+  },
+  "homepage": "https://github.com/agolumbovsky/tbot#readme",
+  "dependencies": {
+    "telegraf": "^4.4.0"
+  }
+}
