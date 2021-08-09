@@ -27,5 +27,12 @@ bot.command('love', ctx => {
     })
 })
 
+bot.command('rank', ctx => {
+    console.log(ctx.from)
+    bot.telegram.sendMessage(ctx.chat.id, "everything is still broken but ask me again later", {
+        
+    })
+})
+
 
 bot.launch();
