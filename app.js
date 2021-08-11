@@ -30,10 +30,11 @@ bot.command('love', ctx => {
 bot.command('rank', ctx => {
     console.log(ctx.from)
     console.log(ctx.message.text)
-    bot.telegram.sendMessage(ctx.chat.id, "everything is still broken but ask me again later", {
+
+    bot.telegram.sendMessage(ctx.chat.id, `did you say ${ ctx.message.text }?`, {
         
     })
 })
 
-
+console.log("tbot started")
 bot.launch();
