@@ -17,7 +17,7 @@ const pool = new Pool({
     user: 'tbot',
     host: 'localhost',
     database: 'tbot',
-    password: 'tbot',
+    // password: 'tbot',
     port: 5432,
 });
 
