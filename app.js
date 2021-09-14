@@ -12,14 +12,11 @@ const { Pool, client } = require('pg');
 //       return resArray;
 //    };
 
+const connectionString = 'postgresql://ag:sooka@localhost:5432/ag'
 
-const pool = new Pool(/*{
-    user: 'ag',
-    host: 'localhost',
-    database: 'ag',
-    password: 'tbot',
-    port: 5432,
-}*/);
+const pool = new Pool({
+    connectionString,
+});
 
 
 // uses env variables to connect
