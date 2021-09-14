@@ -13,7 +13,7 @@ const { Pool, client } = require('pg');
 //    };
 
 
-const pool = new pool();
+const pool = new Pool();
 
 // uses env variables to connect
 // something tells me it will break to shit on windows. or on linux. either way, it's going to screw me somehow
