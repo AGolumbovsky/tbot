@@ -12,7 +12,7 @@ const { Pool, client } = require('pg');
 //       return resArray;
 //    };
 
-const connectionString = 'postgresql://ag:sooka@localhost:5432/ag'
+const connectionString = 'postgres://ag:sooka@localhost:5432/ag'
 
 const pool = new Pool({
     connectionString,
