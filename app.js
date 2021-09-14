@@ -23,8 +23,7 @@ const bot = new Telegraf('1887280803:AAGB0FzoGvfQ30FSlA648zd_1HuYSrvJ_Sc');
 
 bot.command('hey', ctx => {
 
-    pool.query('SELECT NOW()', (err, res) => {
-        console.log("reporting from the inside the command!");
+    pool.query('SELECT * from ranking_5000 where lemma = "star"', (err, res) => {
         console.log(err, res);
         pool.end();
     });
