@@ -14,10 +14,10 @@ const { Pool, client } = require('pg');
 
 
 const pool = new Pool({
-    user: 'tbot',
+    user: 'ag',
     host: 'localhost',
-    database: 'tbot',
-    password: 'tbot',
+    database: 'ag',
+    // password: 'tbot',
     port: 5432,
 });
 
