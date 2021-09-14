@@ -21,6 +21,7 @@ const pool = new Pool(/*{
     port: 5432,
 }*/);
 
+
 // uses env variables to connect
 // something tells me it will break to shit on windows. or on linux. either way, it's going to screw me somehow
 pool.query('SELECT NOW()', (err, res) => {
