@@ -13,13 +13,13 @@ const { Pool, client } = require('pg');
 //    };
 
 
-const pool = new Pool({
+const pool = new Pool(/*{
     user: 'ag',
     host: 'localhost',
     database: 'ag',
     // password: 'tbot',
     port: 5432,
-});
+}*/);
 
 // uses env variables to connect
 // something tells me it will break to shit on windows. or on linux. either way, it's going to screw me somehow
