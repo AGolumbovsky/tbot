@@ -1,4 +1,5 @@
 const { Telegraf } = require('telegraf');
+const { pool, client } = require('pg');
 
 // if (!Object.entries)
 //    Object.entries = function( obj ){
@@ -10,6 +11,17 @@ const { Telegraf } = require('telegraf');
 //          resArray[i] = [ownProps[i], obj[ownProps[i]]];
 //       return resArray;
 //    };
+
+
+const pool = new pool();
+
+// uses env variables to connect
+// something tells me it will break to shit on windows. or on linux. either way, it's going to screw me somehow
+pool.query('SELECT NOW()', (err, res) => {
+    console.log("buggitybug");
+    console.log(err, res);
+    pool.end();
+});
 
 const bot = new Telegraf('1887280803:AAGB0FzoGvfQ30FSlA648zd_1HuYSrvJ_Sc');
 
@@ -38,3 +50,5 @@ bot.command('rank', ctx => {
 
 console.log("tbot started")
 bot.launch();
+
+
