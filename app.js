@@ -1,5 +1,5 @@
 const { Telegraf } = require('telegraf');
-const { pool, client } = require('pg');
+const { Pool, client } = require('pg');
 
 // if (!Object.entries)
 //    Object.entries = function( obj ){
