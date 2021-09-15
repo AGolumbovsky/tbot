@@ -27,22 +27,22 @@ bot.command('rank', ctx => {
     console.log(ctx.message)
     const word =  ctx.message.text.split(' ').slice( 1 ).join(' ')
     
-    bot.telegram.sendMessage(ctx.chat.id, `did you say ${ word }?`, {
-        
-    })
     
     pool.query("SELECT * from ranking_5000 where lemma =" + word  , (err, res) => {  
         
         if (err) err;
         
         console.log(res.rows);
-
+        
         if (res.rows) {
-
+            
             
             for (let row of res.rows) {
                 console.log("THIS IS DRE DROID YOUR LOOKING FOR:")
                 console.log("This stars rating is: " + row.ranking);
+                bot.telegram.sendMessage(ctx.chat.id, `The word ${ word } is ranked a`, {
+                    
+                })
             }
         } else {
             console.log("something happened");
