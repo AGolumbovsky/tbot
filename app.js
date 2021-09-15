@@ -44,6 +44,8 @@ bot.command('rank', ctx => {
         }
         
     })
+
+    ctx.message.text = "";
     
     // pool.end();
     
