@@ -26,7 +26,7 @@ bot.command('rank', ctx => {
     console.log(ctx.message.text);
     const word =  ctx.message.text.split(' ').slice( 1 ).join(' ');
     
-    pool.query("SELECT * from ranking_5000 where lemma = " + word  , (err, res) => {  
+    pool.query("SELECT * from ranking_5000 where lemma = " + "'" + word + "'"  , (err, res) => {  
 
         console.log("this is what inside the quiery thinks the word is: " + word);
         
