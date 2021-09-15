@@ -30,10 +30,9 @@ bot.command('rank', ctx => {
         
     })
     
-    pool.query("SELECT * from ranking_5000 where lemma = 'star';", (err, res) => {
+    pool.query("SELECT * from ranking_5000 where lemma = 'star';", (err, res) => {  
         
-        
-        // console.log(err);
+        console.log(res.rows);
         
         for (let row of res.rows) {
             console.log("THIS IS DRE DROID YOUR LOOKING FOR:")
