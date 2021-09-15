@@ -40,7 +40,7 @@ bot.command('rank', ctx => {
             for (let row of res.rows) {
                 console.log("THIS IS DRE DROID YOUR LOOKING FOR:")
                 console.log("This stars rating is: " + row.ranking);
-                bot.telegram.sendMessage(ctx.chat.id, `The word ${ word } is ranked a`, {
+                bot.telegram.sendMessage(ctx.chat.id, "The word " + word + " is ranked " + row.ranking, {
                     
                 })
             }
