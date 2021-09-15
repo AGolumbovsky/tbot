@@ -31,7 +31,7 @@ bot.command('rank', ctx => {
         
     })
     
-    pool.query(`SELECT * from ranking_5000 where lemma = ${ word };`, (err, res) => {  
+    pool.query("SELECT * from ranking_5000 where lemma =" + word  , (err, res) => {  
         
         if (err) err;
         
