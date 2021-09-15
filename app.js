@@ -36,10 +36,10 @@ bot.command('rank', ctx => {
         
         console.log(res.rows);
         
-        // for (let row of res.rows) {
-        //     console.log("THIS IS DRE DROID YOUR LOOKING FOR:")
-        //     console.log("This stars rating is: " + row.ranking);
-        // }
+        for (let row of res.rows) {
+            console.log("THIS IS DRE DROID YOUR LOOKING FOR:")
+            console.log("This stars rating is: " + row.ranking);
+        }
         
     })
     
