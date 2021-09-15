@@ -21,7 +21,7 @@ const pool = new Pool({
     connectionString,
 });
 
-bot.command('rank', ctx => {
+bot.command('rnk', ctx => {
     
     console.log(ctx.from)
     console.log(ctx.message)
