@@ -51,6 +51,7 @@ bot.command('rank', ctx => {
     })
     
     ctx.message.text = "";
+    word = "";
     
     // pool.end();
     
