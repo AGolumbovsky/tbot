@@ -31,16 +31,18 @@ bot.command('rank', ctx => {
     })
     
     pool.query("SELECT * from ranking_5000 where lemma = 'star';", (err, res) => {  
+
+        if (err) err;
         
         console.log(res.rows);
         
+        for (let row of res.rows) {
+            console.log("THIS IS DRE DROID YOUR LOOKING FOR:")
+            console.log("This stars rating is: " + row.ranking);
+        }
         
     })
     
-    for (let row of res.rows) {
-        console.log("THIS IS DRE DROID YOUR LOOKING FOR:")
-        console.log("This stars rating is: " + row.ranking);
-    }
 
     pool.end();
     
