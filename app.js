@@ -28,7 +28,7 @@ bot.command('hey', ctx => {
 
         for (let row of res.rows) {
             console.log("THIS IS DRE DROID YOUR LOOKING FOR:")
-            console.log(row);
+            console.log("The ranking is: " + row.ranking);
         }
 
         pool.end();
