@@ -26,7 +26,9 @@ bot.command('rank', ctx => {
 
     console.log(ctx.from)
     console.log(ctx.message)
-    bot.telegram.sendMessage(ctx.chat.id, `did you say ${ ctx.message.text }?`, {
+    const word =  ctx.message.text.split(' ').slice( 1 ).join(' ')
+
+    bot.telegram.sendMessage(ctx.chat.id, `did you say ${ word }?`, {
         
     })
     
