@@ -21,7 +21,7 @@ const pool = new Pool({
     connectionString,
 });
 
-bot.command('rnk', ctx => {
+bot.command('rank', ctx => {
     
     console.log(ctx.from)
     console.log(ctx.message)
@@ -36,10 +36,16 @@ bot.command('rnk', ctx => {
         if (err) err;
         
         console.log(res.rows);
-        
-        for (let row of res.rows) {
-            console.log("THIS IS DRE DROID YOUR LOOKING FOR:")
-            console.log("This stars rating is: " + row.ranking);
+
+        if (res.rows) {
+
+            
+            for (let row of res.rows) {
+                console.log("THIS IS DRE DROID YOUR LOOKING FOR:")
+                console.log("This stars rating is: " + row.ranking);
+            }
+        } else {
+            console.log("something happened");
         }
         
     })
