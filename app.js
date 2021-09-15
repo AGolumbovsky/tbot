@@ -36,9 +36,10 @@ bot.command('rank', ctx => {
         
         if (res.rows) {
             
-            let message = "The word " + row.lemma + " is ranked " + row.ranking + " as a " + row.part_of_sp;
             
             for (let row of res.rows) {
+                
+                let message = "The word " + row.lemma + " is ranked " + row.ranking + " as a " + row.part_of_sp;
                 console.log("THIS IS DRE DROID YOUR LOOKING FOR:")
                 console.log("This stars rating is: " + row.ranking);
                 bot.telegram.sendMessage(ctx.chat.id, message, {
