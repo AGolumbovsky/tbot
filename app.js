@@ -39,8 +39,8 @@ bot.command('rank', ctx => {
             console.log("This stars rating is: " + row.ranking);
         }
         
-        pool.end();
     })
+    pool.end();
     
 })
 
