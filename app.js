@@ -14,7 +14,6 @@ const { Pool, client } = require('pg');
 
 
 const bot = new Telegraf('1887280803:AAGB0FzoGvfQ30FSlA648zd_1HuYSrvJ_Sc');
-bot.launch();
 console.log("tbot started")
 
 const connectionString = 'postgres://ag:wtf@localhost:5432/ag';
@@ -23,17 +22,17 @@ const pool = new Pool({
 });
 
 bot.command('rank', ctx => {
-
+    
     console.log(ctx.from)
     console.log(ctx.message)
     const word =  ctx.message.text.split(' ').slice( 1 ).join(' ')
-
+    
     bot.telegram.sendMessage(ctx.chat.id, `did you say ${ word }?`, {
         
     })
     
     pool.query(`SELECT * from ranking_5000 where lemma = ${ word };`, (err, res) => {  
-
+        
         if (err) err;
         
         console.log(res.rows);
@@ -44,7 +43,7 @@ bot.command('rank', ctx => {
         }
         
     })
-
+    
     ctx.message.text = "";
     
     // pool.end();
@@ -68,3 +67,5 @@ bot.command('love', ctx => {
 })
 
 
+
+bot.launch();
