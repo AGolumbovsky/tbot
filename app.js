@@ -23,16 +23,16 @@ const pool = new Pool({
 
 bot.command('rank', ctx => {
     
-    console.log(ctx.from)
-    console.log(ctx.message)
-    const word =  ctx.message.text.split(' ').slice( 1 ).join(' ')
+    console.log(ctx.message.text);
+    const word =  ctx.message.text.split(' ').slice( 1 ).join(' ');
     
-    
-    pool.query("SELECT * from ranking_5000 where lemma =" + word  , (err, res) => {  
+    pool.query("SELECT * from ranking_5000 where lemma = " + word  , (err, res) => {  
+
+        console.log("this is what inside the quiery thinks the word is: " + word);
         
-        if (err) err;
+        if (err) { console.log("EXTERMINATE! " + err) };
         
-        console.log(res.rows);
+        console.log("res.rows is: " + res.rows);
         
         if (res.rows) {
             
