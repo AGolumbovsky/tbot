@@ -23,10 +23,15 @@ const pool = new Pool({
 });
 
 bot.command('rank', ctx => {
+    
     console.log(ctx.from)
     console.log(ctx.message.text)
+    bot.telegram.sendMessage(ctx.chat.id, `did you say ${ ctx.message.text }?`, {
+        
+    })
     
     pool.query("SELECT * from ranking_5000 where lemma = 'star';", (err, res) => {
+        
         console.log(err, res);
         
         for (let row of res.rows) {
@@ -37,9 +42,6 @@ bot.command('rank', ctx => {
         pool.end();
     })
     
-    bot.telegram.sendMessage(ctx.chat.id, `did you say ${ ctx.message.text }?`, {
-        
-    })
 })
 
 
