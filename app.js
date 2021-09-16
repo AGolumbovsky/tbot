@@ -39,7 +39,7 @@ bot.command('rank', ctx => {
             
             for (let row of res.rows) {
 
-                if (row) {
+                if (row.lemma) {
 
                     let message = "The word " + row.lemma + " is ranked " + row.ranking + " as a " + row.part_of_sp;
                     console.log("THIS IS DRE DROID YOUR LOOKING FOR:")
