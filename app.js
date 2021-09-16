@@ -41,6 +41,8 @@ bot.command('rank', ctx => {
 
                 if (row.lemma.length > 0) {
 
+                    console.log(row.lemma, row.lemma.length);
+
                     let message = "The word " + row.lemma + " is ranked " + row.ranking + " as a " + row.part_of_sp;
                     console.log("THIS IS DRE DROID YOUR LOOKING FOR:")
                     console.log("This stars rating is: " + row.ranking);
