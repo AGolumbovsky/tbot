@@ -50,11 +50,11 @@ bot.command('rank', ctx => {
 
                     case "m":
                         console.log("numeric");
-                        part_of_speech = "numeric";
+                        part_of_speech = "a numeric";
                         break;
                     case "v":
                         console.log("verb");
-                        part_of_speech = "verb";
+                        part_of_speech = "a verb";
                         break;
                     case "e":
                         console.log('e');
@@ -65,16 +65,16 @@ bot.command('rank', ctx => {
                         part_of_speech = "d";
                         break;
                     case "j":
-                        console.log("adjective");
+                        console.log("an adjective");
                         part_of_speech = "adjective";
                         break;
                     case "r":
                         console.log("adverb");
-                        part_of_speech = "adverb";
+                        part_of_speech = "an adverb";
                         break;
                     case "p":
                         console.log("pronoun");
-                        part_of_speech = "pronoun";
+                        part_of_speech = "a pronoun";
                         break;
                     case "t":
                         console.log('t');
@@ -82,7 +82,7 @@ bot.command('rank', ctx => {
                         break;
                     case "a":
                         console.log("article");
-                        part_of_speech = "article";
+                        part_of_speech = "an article";
                         break;
                     case "u":
                         console.log('u');
@@ -90,11 +90,11 @@ bot.command('rank', ctx => {
                         break;
                     case "i":
                         console.log("preposition");
-                        part_of_speech = "preposition";
+                        part_of_speech = "a preposition";
                         break;
                     case "c":
                         console.log('conjunction');
-                        part_of_speech = "conjunction";
+                        part_of_speech = "a conjunction";
                         break;
                     case "x":
                         console.log("nein! nein! nein! nein! nein!");
@@ -104,7 +104,7 @@ bot.command('rank', ctx => {
                         console.log(part_of_speech);
 }
 
-                    let message = "The word " + row.lemma + " is ranked " + row.ranking + " as a " + part_of_speech;
+                    let message = "The word " + row.lemma + " is ranked " + row.ranking + " as " + part_of_speech;
                     console.log("This stars rating is: " + row.ranking);
                     bot.telegram.sendMessage(ctx.chat.id, message, {});
 
