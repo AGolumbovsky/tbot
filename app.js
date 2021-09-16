@@ -36,11 +36,11 @@ bot.command('rank', ctx => {
         
         if (word) {
             
-            console.log("the res.rows.row is: " + res.rows.row)
+            console.log("the res.rows.row is: " + res.rows.row) // >>> undefined
             
             for (let row of res.rows) {
 
-                if (word == row.lemma) {
+                if (res.rows.keys() > 0) {
 
                     console.log("row.lemma is: " + row.lemma + row.lemma.length);
 
