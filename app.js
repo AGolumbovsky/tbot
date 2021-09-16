@@ -24,7 +24,7 @@ const pool = new Pool({
 bot.command('rank', ctx => {
     
     console.log(ctx.message.text);
-    let word =  ctx.message.text.split(' ').slice( 1 ).join(' ');
+    const word =  ctx.message.text.split(' ').slice( 1 ).join(' ');
     
     pool.query("SELECT * from ranking_5000 where lemma = " + "'" + word + "'"  , (err, res) => {  
 
@@ -44,7 +44,6 @@ bot.command('rank', ctx => {
                     console.log("row.lemma is: " + row.lemma + row.lemma.length);
 
                     let message = "The word " + row.lemma + " is ranked " + row.ranking + " as a " + row.part_of_sp;
-                    console.log("THIS IS DRE DROID YOUR LOOKING FOR:")
                     console.log("This stars rating is: " + row.ranking);
                     bot.telegram.sendMessage(ctx.chat.id, message, {});
 
@@ -61,7 +60,7 @@ bot.command('rank', ctx => {
     })
     
     ctx.message.text = "";
-    word = "";
+    // word = "";
     
     // pool.end();
     
