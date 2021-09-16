@@ -41,7 +41,7 @@ bot.command('rank', ctx => {
             for (let row of res.rows) {
 
                 console.log("re.rows.keys() is: " + res.rows.keys());
-                if (res.rows.keys() > 0) {
+                if (Object.keys(res.rows) > 0) {
 
                     console.log("row.lemma is: " + row.lemma + row.lemma.length);
 
