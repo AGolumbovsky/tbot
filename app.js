@@ -34,7 +34,7 @@ bot.command('rank', ctx => {
         
         console.log("res.rows is: " + res.rows);
         
-        if (res.rows > 0) {
+        if (res.rows) {
             
             
             for (let row of res.rows) {
@@ -56,7 +56,7 @@ bot.command('rank', ctx => {
     
     // pool.end();
     
-})
+});
 
 
 bot.command('hey', ctx => {
@@ -64,15 +64,15 @@ bot.command('hey', ctx => {
     console.log(ctx.from)
     bot.telegram.sendMessage(ctx.chat.id, "dafuq you lookin at?", {
         
-    })
+    });
 })
 
 bot.command('love', ctx => {
     console.log(ctx.from)
     bot.telegram.sendMessage(ctx.chat.id, "Fuck off, you hippie", {
         
-    })
-})
+    });
+});
 
 bot.launch();
 
