@@ -45,7 +45,8 @@ bot.command('rank', ctx => {
                     console.log("row.lemma is: " + row.lemma + row.lemma.length);
 
                     let part_of_speech = "problem";
-                    switch (res.rows.part_of_sp) {
+                    switch (row.part_of_sp) {
+                        
                     case "n":
                         console.log('noun');
                         break;
