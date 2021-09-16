@@ -38,9 +38,9 @@ bot.command('rank', ctx => {
             
             console.log("Object.keys(res.rows) is: " + Object.keys(res.rows).length);
             
-            for (let row of res.rows) {
+            if (Object.keys(res.rows).length > 0) {
 
-                if (word) {
+                for (let row of res.rows) {
 
                     console.log("row.lemma is: " + row.lemma + row.lemma.length);
 
@@ -48,11 +48,11 @@ bot.command('rank', ctx => {
                     console.log("This stars rating is: " + row.ranking);
                     bot.telegram.sendMessage(ctx.chat.id, message, {});
 
-                } else {
-
-                    console.log("NO WORD FOR YOU");
-                    bot.telegram.sendMessage(ctx.chat.id, word + " is not on the list of 5000 most used words", {});
                 }
+            } else {
+    
+                console.log("NO WORD FOR YOU");
+                bot.telegram.sendMessage(ctx.chat.id, word + " is not on the list of 5000 most used words", {});
             }
         } else {
             console.log("something went terribly wrong but you don't know what");
