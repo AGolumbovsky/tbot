@@ -34,19 +34,26 @@ bot.command('rank', ctx => {
         
         console.log("res.rows is: " + res.rows);
         
-        if (res.rows.row) {
+        if (res.rows) {
             
             
             for (let row of res.rows) {
 
-                let message = "The word " + row.lemma + " is ranked " + row.ranking + " as a " + row.part_of_sp;
-                console.log("THIS IS DRE DROID YOUR LOOKING FOR:")
-                console.log("This stars rating is: " + row.ranking);
-                bot.telegram.sendMessage(ctx.chat.id, message, {});
+                if (row) {
+
+                    let message = "The word " + row.lemma + " is ranked " + row.ranking + " as a " + row.part_of_sp;
+                    console.log("THIS IS DRE DROID YOUR LOOKING FOR:")
+                    console.log("This stars rating is: " + row.ranking);
+                    bot.telegram.sendMessage(ctx.chat.id, message, {});
+
+                } else {
+
+                    console.log("NO WORD FOR YOU");
+                    bot.telegram.sendMessage(ctx.chat.id, word + " is not on the list of 5000 most used words", {});
+                }
             }
         } else {
-            console.log("NO WORD FOR YOU");
-            bot.telegram.sendMessage(ctx.chat.id, word + " is not on the list of 5000 most used words", {});
+            console.log("something went terribly wrong but you don't know what");
         }
         
     })
