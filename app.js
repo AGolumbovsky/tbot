@@ -46,20 +46,51 @@ bot.command('rank', ctx => {
 
                     let part_of_speech = "problem";
                     switch (row.part_of_sp) {
-                        
-                    case "n":
-                        console.log('noun');
-                        break;
-                        
-                    case "j":
-                        console.log('adjective');
-                        break;
 
+                    case "m":
+                        console.log("numeric");
+                        break;
+                    case "v":
+                        console.log("verb");
+                        break;
+                    case "e":
+                        console.log('e');
+                        break;
+                    case "d":
+                        console.log("d");
+                        break;
+                    case "j":
+                        console.log("adjective");
+                        break;
+                    case "r":
+                        console.log("adverb");
+                        break;
+                    case "p":
+                        console.log("pronoun");
+                        break;
+                    case "t":
+                        console.log('t');
+                        break;
+                    case "a":
+                        console.log("article");
+                        break;
+                    case "u":
+                        console.log('u');
+                        break;
+                    case "i":
+                        console.log("preposition");
+                        break;
+                    case "c":
+                        console.log('conjunction');
+                        break;
+                    case "x":
+                        console.log("nein! nein! nein! nein! nein!");
+                        break;
                     default:
                         console.log(part_of_speech);
 }
 
-                    let message = "The word " + row.lemma + " is ranked " + row.ranking + " as a " + row.part_of_sp;
+                    let message = "The word " + row.lemma + " is ranked " + row.ranking + " as a " + part_of_speech;
                     console.log("This stars rating is: " + row.ranking);
                     bot.telegram.sendMessage(ctx.chat.id, message, {});
 
