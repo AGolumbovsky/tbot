@@ -76,7 +76,7 @@ bot.command('rank', ctx => {
                         part_of_speech = "an article";
                         break;
                     case "u":
-                        part_of_speech = "u";
+                        part_of_speech = "interjection";
                         break;
                     case "i":
                         part_of_speech = "a preposition";
