@@ -45,46 +45,60 @@ bot.command('rank', ctx => {
                     console.log("row.lemma is: " + row.lemma + row.lemma.length);
 
                     let part_of_speech = "problem";
+
                     switch (row.part_of_sp) {
 
                     case "m":
                         console.log("numeric");
+                        part_of_speech = "numeric";
                         break;
                     case "v":
                         console.log("verb");
+                        part_of_speech = "verb";
                         break;
                     case "e":
                         console.log('e');
+                        part_of_speech = "e";
                         break;
                     case "d":
                         console.log("d");
+                        part_of_speech = "d";
                         break;
                     case "j":
                         console.log("adjective");
+                        part_of_speech = "adjective";
                         break;
                     case "r":
                         console.log("adverb");
+                        part_of_speech = "adverb";
                         break;
                     case "p":
                         console.log("pronoun");
+                        part_of_speech = "pronoun";
                         break;
                     case "t":
                         console.log('t');
+                        part_of_speech = "t";
                         break;
                     case "a":
                         console.log("article");
+                        part_of_speech = "article";
                         break;
                     case "u":
                         console.log('u');
+                        part_of_speech = "u";
                         break;
                     case "i":
                         console.log("preposition");
+                        part_of_speech = "preposition";
                         break;
                     case "c":
                         console.log('conjunction');
+                        part_of_speech = "conjunction";
                         break;
                     case "x":
                         console.log("nein! nein! nein! nein! nein!");
+                        part_of_speech = "X gonna give it to ya";
                         break;
                     default:
                         console.log(part_of_speech);
