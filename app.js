@@ -39,7 +39,7 @@ bot.command('rank', ctx => {
             
             for (let row of res.rows) {
 
-                if (row.lemma.length > 0) {
+                if (word == row.lemma) {
 
                     console.log("row.lemma is: " + row.lemma + row.lemma.length);
 
@@ -55,6 +55,7 @@ bot.command('rank', ctx => {
             }
         } else {
             console.log("something went terribly wrong but you don't know what");
+            bot.telegram.sendMessage(ctx.chat.id, "Please enter a word", {});
         }
         
     })
