@@ -36,7 +36,7 @@ bot.command('rank', ctx => {
         
         if (word) {
             
-            console.log("Object.keys(res.rows) is: " + Object.keys(res.rows));
+            console.log("Object.keys(res.rows) is: " + Object.keys(res.rows).length);
             
             for (let row of res.rows) {
 
