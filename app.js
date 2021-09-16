@@ -34,7 +34,7 @@ bot.command('rank', ctx => {
         
         console.log("res.rows is: " + res.rows);
         
-        if (res.rows) {
+        if (word) {
             
             
             for (let row of res.rows) {
