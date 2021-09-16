@@ -46,7 +46,7 @@ bot.command('rank', ctx => {
             }
         } else {
             console.log("NO WORD FOR YOU");
-            bot.telegram.sendMessage(ctx.chat.id, `${ word } is not on the list of most used 5000 words`, {});
+            bot.telegram.sendMessage(ctx.chat.id, word + " is not on the list of 5000 most used words", {});
         }
         
     })
