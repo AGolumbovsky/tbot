@@ -36,6 +36,7 @@ bot.command('rank', ctx => {
         
         if (word) {
             
+            console.log("the res.rows.row is: " + res.rows.row)
             
             for (let row of res.rows) {
 
