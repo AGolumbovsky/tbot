@@ -24,7 +24,7 @@ const pool = new Pool({
 bot.command('rank', ctx => {
     
     console.log(ctx.message.text);
-    let word =  ctx.message.text.split(' ').slice( 1 ).join(' ');
+    var word =  ctx.message.text.split(' ').slice( 1 ).join(' ');
     
     pool.query("SELECT * from ranking_5000 where lemma = " + "'" + word + "'"  , (err, res) => {  
 
